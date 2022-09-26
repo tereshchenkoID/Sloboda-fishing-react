@@ -1,0 +1,62 @@
+@import "../../scss/config";
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.item {
+  @include make-spacer('mb', 6);
+
+  &:last-child {
+    @include make-spacer('mb', 0);
+  }
+}
+
+.title {
+  @include make-spacer('mb', 1);
+}
+
+.text {
+  @include make-spacer('mb', 4);
+}
+
+.link {
+  @include make-spacer('py', 3);
+  @include make-spacer('px', 4);
+
+  display: inline-block;
+  background-color: var(--color-secondary);
+  position: relative;
+  min-width: 150px;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: var(--default-transition);
+    background-color: var(--color-accent);
+    content: '';
+  }
+
+  &:hover {
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}

@@ -1,0 +1,19 @@
+@import "../../scss/config";
+
+.block {
+  @include make-spacer('my', 4);
+  @include flex($align-items: center);
+}
+
+.item {
+  @include make-spacer('mx', 1);
+}
+
+.link {
+  @include flex(center, center);
+  @include size(20px);
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}

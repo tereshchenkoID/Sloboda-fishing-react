@@ -1,0 +1,29 @@
+@import "../../scss/config";
+
+.block {
+  @include make-spacer('pb', 0);
+}
+
+.map {
+
+  iframe {
+    @include size(100%, 300px);
+
+    display: block;
+    min-height: 300px;
+    overflow: hidden;
+    border: 0;
+
+    @include media-breakpoint-up(sm) {
+      height: 500px;
+    }
+
+    @include media-breakpoint-up(md) {
+      height: 700px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      height: 900px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../scss/config";
+
+.block {
+  display: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  @include media-breakpoint-up(sm) {
+    @include flex(center, center);
+  }
+}

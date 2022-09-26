@@ -1,0 +1,56 @@
+@import "../../scss/config";
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 20px;
+  row-gap: 40px;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.date {
+  @include make-spacer('my', 2);
+
+  color: var(--color-accent);
+  font-size: 14px;
+}
+
+.title {
+  @include line-clamp(3);
+
+  font-size: 16px;
+  text-transform: uppercase;
+
+  a {
+
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+
+.wrapper {
+  @include make-spacer('mt', 10);
+  @include flex(center, center);
+}
+
+.description {
+  @include line-clamp(3);
+}
+
+.player {
+  @include make-spacer('mb', 2);
+
+  background-color: var(--color-secondary);
+
+  iframe {
+    display: block;
+  }
+}

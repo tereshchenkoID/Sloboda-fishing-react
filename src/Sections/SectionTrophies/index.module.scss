@@ -1,0 +1,166 @@
+@import "../../scss/config";
+
+.wrapper {
+  @include make-spacer('mt', 10);
+  @include flex(center, center);
+}
+
+.grid {
+  @include make-spacer('py', 10);
+
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-dark);
+    width: 2px;
+    content: '';
+  }
+}
+
+.row {
+  @include make-spacer('mb', 10);
+  @include flex(center);
+
+  position: relative;
+
+  &:last-child {
+    @include make-spacer('mb', 0);
+  }
+
+  &:nth-child(odd) {
+    @include make-spacer('pr', 10, md);
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-start;
+    }
+
+    &::before,
+    &::after {
+      right: 50%;
+    }
+
+    &::before {
+      transform: translate(50%, -50%);
+    }
+
+    .item {
+
+      @include media-breakpoint-up(md) {
+        text-align: right;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    @include make-spacer('pl', 10, md);
+
+    @include media-breakpoint-up(md) {
+      justify-content: flex-end;
+    }
+
+    &::before,
+    &::after {
+      left: 50%;
+    }
+
+    &::before {
+      transform: translate(-50%, -50%);
+    }
+
+    .item {
+
+      @include media-breakpoint-up(md) {
+        flex-direction: row-reverse;
+        text-align: left;
+      }
+    }
+  }
+
+  &::after,
+  &::before {
+    display: none;
+    position: absolute;
+    top: 50%;
+    background-color: var(--color-dark);
+    transition: var(--default-transition);
+    content: '';
+
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &::after {
+    @include size(46px, 2px);
+
+    transform: translateY(-50%);
+  }
+
+  &::before {
+    @include size(10px);
+
+    border-radius: 50%;
+  }
+
+  @include media-breakpoint-up(lg) {
+
+    &:hover {
+
+      &::after,
+      &:before {
+        background-color: var(--color-accent);
+      }
+
+      .image {
+
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+.item {
+  @include flex(center, center, column-reverse);
+
+  cursor: pointer;
+  text-align: center;
+
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 50%;
+  }
+}
+
+.image {
+  @include make-spacer('my', 4);
+  @include make-spacer('my', 0, md);
+  @include make-spacer('mx', 4, md);
+  @include size(150px);
+
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  overflow: hidden;
+  flex-shrink: 0;
+
+  img {
+    object-fit: cover;
+    transition: var(--default-transition);
+  }
+}
+
+.info {
+  background-color: #fff;
+}
+
+.weight {
+  color: var(--color-accent);
+}

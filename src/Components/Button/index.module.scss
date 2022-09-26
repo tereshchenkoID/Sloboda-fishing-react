@@ -1,0 +1,35 @@
+@import "../../scss/config";
+
+.block {
+  @include make-spacer('p', 4);
+
+  display: inline-block;
+  background-color: var(--color-secondary);
+  position: relative;
+  min-width: 150px;
+  text-align: center;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: var(--default-transition);
+    background-color: var(--color-accent);
+    content: '';
+  }
+
+  &:hover {
+
+    &::before {
+      width: 100%;
+    }
+  }
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+}

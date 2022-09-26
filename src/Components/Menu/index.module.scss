@@ -1,0 +1,33 @@
+@import "../../scss/config";
+
+.block {
+  @include flex($direction: column);
+
+  overflow: hidden;
+}
+
+.item {
+  @include font-size(20px);
+  @include make-spacer('my', 2);
+
+  transition: var(--default-transition);
+
+  @include media-breakpoint-up(sm) {
+    @include font-size(24px);
+  }
+
+  &.active {
+    color: var(--color-accent);
+  }
+
+  &:hover {
+    transform: translateX(20px);
+  }
+}
+
+:global {
+
+  .active {
+    color: var(--color-accent);
+  }
+}

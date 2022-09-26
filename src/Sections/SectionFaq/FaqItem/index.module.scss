@@ -1,0 +1,56 @@
+@import "../../../scss/config";
+
+.block {
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+
+  &.active {
+    border-color: var(--color-accent);
+
+    .header {
+      background-color: var(--color-accent);
+    }
+
+    .title {
+      color: var(--color-white);
+    }
+
+    .icon {
+      transform: translateY(-50%) rotateZ(0);
+      color: var(--color-white);
+    }
+
+    .body {
+      display: block;
+    }
+  }
+}
+
+.header {
+  @include make-spacer('pl', 3);
+  @include make-spacer('pr', 12);
+  @include make-spacer('py', 3);
+
+  position: relative;
+}
+
+.body {
+  @include make-spacer('px', 3);
+  @include make-spacer('py', 4);
+
+  display: none;
+}
+
+.icon {
+  @include size(20px);
+
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%) rotateZ(45deg);
+  transition: var(--default-transition);
+}
+
+.text {
+  font-size: 18px;
+}

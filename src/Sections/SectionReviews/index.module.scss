@@ -1,0 +1,61 @@
+@import "../../scss/config";
+
+.block {
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 100px;
+}
+
+.slider {
+  @include make-spacer('mx', auto);
+
+  @include media-breakpoint-up(lg) {
+    max-width: 70%;
+  }
+}
+
+.item {
+  @include make-spacer('pb', 18);
+  @include make-spacer('mx', auto);
+
+  position: relative;
+}
+
+.text {
+  @include make-spacer('px', 8);
+  @include make-spacer('pt', 8);
+  @include make-spacer('pb', 16);
+
+  background-color: var(--color-light-900);
+}
+
+.icon {
+  @include size(36px);
+  @include make-spacer('mb', 2);
+
+  display: block;
+}
+
+.image {
+  @include make-spacer('mx', auto);
+  @include size(90px);
+
+  border-radius: 50%;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.info {
+  transform: translateY(-40px);
+  text-align: center;
+}
+
+.title {
+  font-size: 18px;
+}
+

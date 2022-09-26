@@ -1,0 +1,47 @@
+@import "../../scss/config";
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 15px;
+
+  @include media-breakpoint-up(sm) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.column {
+  overflow: hidden;
+  height: 250px;
+
+  @include media-breakpoint-up(sm) {
+    height: 250px;
+  }
+
+  img {
+    object-fit: cover;
+    transition: var(--default-transition);
+    cursor: pointer;
+  }
+
+  &:hover {
+
+    img {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.wrapper {
+  @include make-spacer('mt', 10);
+  @include flex(center, center);
+}

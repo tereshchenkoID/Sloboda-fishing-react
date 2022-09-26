@@ -1,0 +1,49 @@
+:root {
+  --font-size: 16px;
+  --font-family: 'Roboto', sans-serif;
+  --font-family-alt: 'Roboto Slab', sans-serif;
+
+  --line-height: 1.5;
+
+  --typography-regular: 400;
+  --typography-medium: 500;
+  --typography-semibold: 600;
+  --typography-bold: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--color-title);
+  font-family: var(--font-family-alt);
+  font-weight: var(--typography-semibold);
+  line-height: 1.2;
+
+  @include media-breakpoint-up(sm) {
+    line-height: 2;
+  }
+}
+
+$title-size: (
+  '1': 56px,
+  '2': 46px,
+  '3': 42px,
+  '4': 38px,
+  '5': 26px,
+  '6': 24px
+);
+
+@each $index, $status in $title-size {
+
+  h#{$index} {
+    font-size: $status - ($status * 30 / 100);
+
+    @include media-breakpoint-up(sm) {
+      font-size: $status;
+    }
+  }
+}

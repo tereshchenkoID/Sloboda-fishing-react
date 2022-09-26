@@ -1,0 +1,24 @@
+@import "../../scss/config";
+
+.block {
+  @include make-spacer('mb', 10);
+  @include make-spacer('mb', 20, lg);
+
+  text-align: center;
+}
+
+.hr {
+  @include make-spacer('mx', auto);
+  @include make-spacer('mt', 4);
+  @include size(100px, 2px);
+
+  background-color: var(--color-accent);
+  border: 0;
+}
+
+.description {
+  @include make-spacer('mx', auto);
+  @include make-spacer('mt', 4);
+
+  max-width: 600px;
+}

@@ -1,0 +1,54 @@
+@import "../../scss/config";
+
+.block {
+  @include make-spacer('pt', 10);
+  @include make-spacer('pb', 8);
+  @include make-spacer('py', 20, lg);
+
+  background-color: var(--color-white);
+}
+
+.wrapper {
+  display: grid;
+  align-items: center;
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.left,
+.right,
+.center {
+  @include flex($align-items: center, $direction: column);
+}
+
+.left {
+
+  @include media-breakpoint-up(lg) {
+    align-items: flex-end;
+  }
+}
+
+.right {
+  text-align: center;
+
+  @include media-breakpoint-up(lg) {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.center {
+  @include make-spacer('pt', 10, lg);
+  @include make-spacer('mt', 4);
+  @include make-spacer('mt', 0, lg);
+}
+
+.social {
+  @include flex($align-items: center);
+
+  .text {
+    @include make-spacer('mr', 1);
+  }
+}

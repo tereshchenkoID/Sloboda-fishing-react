@@ -1,0 +1,9 @@
+@import "../../scss/config";
+
+.item {
+  @include make-spacer('mb', 8);
+
+  &:last-child {
+    @include make-spacer('mb', 0);
+  }
+}

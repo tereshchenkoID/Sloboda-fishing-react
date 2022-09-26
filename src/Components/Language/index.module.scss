@@ -1,0 +1,75 @@
+@import '../../scss/config';
+
+.block {
+  @include flex($align-items: center);
+
+  position: relative;
+  z-index: 1;
+
+  &.active {
+
+    .dropdown {
+      display: block;
+    }
+
+    .arrow {
+      transform: rotateZ(0);
+      color: var(--color-accent);
+    }
+  }
+}
+
+.checked {
+  @include flex(center, center);
+
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.text {
+  @include make-spacer('mr', 1);
+}
+
+.arrow {
+  @include size(10px, 6px);
+
+  transform: rotateZ(180deg);
+  transition: var(--default-transition);
+  color: var(--color-border);
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: -15px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  width: 120px;
+}
+
+.button {
+  @include size(100%, 40px);
+  @include flex($align-items: center);
+  @include make-spacer('px', 3);
+
+  border-bottom: 1px solid var(--color-border);
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &:hover {
+    background-color: var(--color-border);
+  }
+
+  &.active {
+    color: var(--color-primary);
+  }
+}
+
+.icon {
+  @include make-spacer('mr', 2);
+
+  width: 25px;
+}

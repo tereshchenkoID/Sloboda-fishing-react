@@ -1,0 +1,13 @@
+:root {
+  --min-width: 20rem;
+  --max-width: 85.375rem;
+
+  --default-transition: all 0.3s;
+  --grid-outher: 15px;
+
+  --nav-height: 70px;
+
+  @include media-breakpoint-up(sm) {
+    --nav-height: 100px;
+  }
+}
