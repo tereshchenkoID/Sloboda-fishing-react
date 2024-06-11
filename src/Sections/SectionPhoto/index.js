@@ -28,14 +28,14 @@ const SectionPhoto = ({inner}) => {
                                               key={Math.random()}
                                               className={styles.column}
                                               data-fancybox={"gallery"}
-                                              data-src={`/image/s-photo/${data.photos.count - i}.webp`}
+                                              data-src={`/image/s-photo/lg/${data.photos.count - i}.webp`}
                                           >
                                               <img
                                                   style={{
                                                       width: '100%',
                                                       height: '100%'
                                                   }}
-                                                  src={`/image/s-photo/${data.photos.count - i}.webp`}
+                                                  src={`/image/s-photo/sm/${data.photos.count - i}.webp`}
                                                   alt={`Fish-${i}`}
                                                   loading={'lazy'}
                                               />

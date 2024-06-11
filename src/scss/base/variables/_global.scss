@@ -3,11 +3,11 @@
   --max-width: 85.375rem;
 
   --default-transition: all 0.3s;
-  --grid-outher: 15px;
+  --grid-outher: 1.06rem;
 
-  --nav-height: 70px;
+  --nav-height: 4.375rem;
 
   @include media-breakpoint-up(sm) {
-    --nav-height: 100px;
+    --nav-height: 6.25rem;
   }
 }

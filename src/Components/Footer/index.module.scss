@@ -1,4 +1,4 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .block {
   @include make-spacer('pt', 10);
@@ -46,9 +46,8 @@
 }
 
 .social {
-  @include flex($align-items: center);
+  @include make-spacer('my', 4);
+  @include flex($align-items: center, $wrap: wrap);
 
-  .text {
-    @include make-spacer('mr', 1);
-  }
+  gap: rem(8px);
 }

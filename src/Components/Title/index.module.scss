@@ -1,4 +1,4 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .block {
   @include make-spacer('mb', 10);
@@ -10,7 +10,7 @@
 .hr {
   @include make-spacer('mx', auto);
   @include make-spacer('mt', 4);
-  @include size(100px, 2px);
+  @include size(rem(100px), rem(2px));
 
   background-color: var(--color-accent);
   border: 0;
@@ -20,5 +20,5 @@
   @include make-spacer('mx', auto);
   @include make-spacer('mt', 4);
 
-  max-width: 600px;
+  max-width: rem(600px);
 }

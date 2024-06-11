@@ -1,9 +1,9 @@
 import React from "react";
 import {ReactTitle} from "react-meta-tags";
 
-import {translateString} from "../../i18n/translate";
+import {translateString} from "i18n/translate";
 
-import SectionDonate from "../../Sections/SectionDonate";
+import SectionDonate from "Sections/SectionDonate";
 
 const Donate = () => {
     return (

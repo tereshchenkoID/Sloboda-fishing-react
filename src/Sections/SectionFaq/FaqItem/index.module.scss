@@ -1,8 +1,8 @@
-@import "../../../scss/config";
+@import "scss/config";
 
 .block {
   cursor: pointer;
-  border: 1px solid var(--color-border);
+  border: rem(1px) solid var(--color-border);
 
   &.active {
     border-color: var(--color-accent);
@@ -42,15 +42,15 @@
 }
 
 .icon {
-  @include size(20px);
+  @include size(rem(20px));
 
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: rem(20px);
   transform: translateY(-50%) rotateZ(45deg);
   transition: var(--default-transition);
 }
 
 .text {
-  font-size: 18px;
+  font-size: rem(18px);
 }

@@ -1,10 +1,10 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .titles {
   @include make-spacer('mx', auto);
   @include make-spacer('mb', 6);
 
-  max-width: 1100px;
+  max-width: rem(1100px);
   text-align: center;
 
   & > * {
@@ -26,10 +26,10 @@
     position: relative;
 
     &::before {
-      @include size(5px);
+      @include size(rem(5px));
 
       position: absolute;
-      top: 10px;
+      top: rem(10px);
       left: 0;
       background-color: var(--color-accent);
       border-radius: 50%;
@@ -47,8 +47,8 @@
   @include make-spacer('mb', 6);
   @include make-spacer('mx', auto);
 
-  max-width: 800px;
-  min-height: 150px;
+  max-width: rem(800px);
+  min-height: rem(150px);
   overflow: hidden;
 }
 

@@ -1,4 +1,4 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .block {
   @include make-spacer('p', 4);
@@ -6,7 +6,7 @@
   display: inline-block;
   background-color: var(--color-secondary);
   position: relative;
-  min-width: 150px;
+  min-width: rem(150px);
   text-align: center;
 
   &::before {

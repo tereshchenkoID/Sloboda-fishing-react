@@ -35,14 +35,14 @@ const SectionTrophies = ({inner}) => {
                                           <div
                                               className={styles.image}
                                               data-fancybox={"trophies"}
-                                              data-src={`/image/s-trophies/${item.img}`}
+                                              data-src={`/image/s-trophies/lg/${item.img}`}
                                           >
                                               <img
                                                   style={{
                                                       width: '100%',
                                                       height: '100%'
                                                   }}
-                                                  src={`/image/s-trophies/${item.img}`}
+                                                  src={`/image/s-trophies/sm/${item.img}`}
                                                   alt={`Trophies-${index}`}
                                                   loading={'lazy'}
                                               />

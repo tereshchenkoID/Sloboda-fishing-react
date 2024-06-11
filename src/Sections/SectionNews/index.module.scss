@@ -1,10 +1,10 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  column-gap: 20px;
-  row-gap: 40px;
+  column-gap: rem(20px);
+  row-gap: rem(40px);
 
   @include media-breakpoint-up(sm) {
     grid-template-columns: repeat(2, 1fr);
@@ -19,13 +19,13 @@
   @include make-spacer('my', 2);
 
   color: var(--color-accent);
-  font-size: 14px;
+  font-size: rem(14px);
 }
 
 .title {
   @include line-clamp(3);
 
-  font-size: 16px;
+  font-size: rem(16px);
   text-transform: uppercase;
 
   a {
@@ -49,6 +49,7 @@
   @include make-spacer('mb', 2);
 
   background-color: var(--color-secondary);
+  min-height: rem(250px);
 
   iframe {
     display: block;

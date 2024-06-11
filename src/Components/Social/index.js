@@ -2,32 +2,48 @@ import styles from './index.module.scss'
 
 const Social = () => {
   return (
-      <ul className={styles.block}>
-          <li className={styles.item}>
-              <a
-                  href={"https://www.facebook.com/groups/1947944298783345/"}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  className={styles.link}
-              >
-                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.1134 0.00324458L6.09122 0C3.81936 0 2.35119 1.5063 2.35119 3.83769V5.60713H0.317969C0.142275 5.60713 0 5.74956 0 5.92526V8.48896C0 8.66466 0.142437 8.80693 0.317969 8.80693H2.35119V15.276C2.35119 15.4517 2.49346 15.594 2.66916 15.594H5.32193C5.49762 15.594 5.6399 15.4515 5.6399 15.276V8.80693H8.0172C8.1929 8.80693 8.33517 8.66466 8.33517 8.48896L8.33614 5.92526C8.33614 5.8409 8.30256 5.76011 8.24302 5.70041C8.18349 5.64071 8.10237 5.60713 8.01801 5.60713H5.6399V4.10715C5.6399 3.38621 5.8117 3.02022 6.75084 3.02022L8.11308 3.01973C8.28861 3.01973 8.43089 2.8773 8.43089 2.70176V0.321214C8.43089 0.145844 8.28877 0.00356904 8.1134 0.00324458Z" fill="currentColor" />
-                  </svg>
-              </a>
-          </li>
-          <li className={styles.item}>
-              <a
-                  href={"mailto:tereschenko23041991@gmail.com?subject=Слобода"}
-                  target={"_blank"}
-                  rel={"noreferrer"}
-                  className={styles.link}
-              >
-                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M8.02417 2.9003C9.69996 2.9003 11.2158 3.7602 12.0846 4.94505L14.1437 2.87122C12.9122 1.26983 10.5419 0 8.02417 0C3.61575 0 0 3.56741 0 7.97583C0 12.3843 3.61575 15.9517 8.02417 15.9517C11.6786 15.9517 14.7528 13.5009 15.6954 10.1511C15.8984 9.45487 16 8.7298 16 7.97583V7.25076H8.74924V10.1505H12.5921C11.7946 11.8618 10.0398 13.0514 8.02417 13.0514C5.22545 13.0514 2.9003 10.7745 2.9003 7.97583C2.9003 5.17711 5.22545 2.9003 8.02417 2.9003Z" fill="currentColor" />
-                 </svg>
-              </a>
-          </li>
-      </ul>
+    <ul className={styles.block}>
+      <li className={styles.item}>
+        <a
+          href={"https://www.facebook.com/groups/1947944298783345/"}
+          target={"_blank"}
+          rel={"noreferrer"}
+          className={styles.link}
+          aria-label={"Facebook"}
+        >
+          <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"/>
+          </svg>
+        </a>
+      </li>
+      <li className={styles.item}>
+        <a
+          href={"https://www.instagram.com/sloboda_fishing/"}
+          target={"_blank"}
+          rel={"noreferrer"}
+          className={styles.link}
+          aria-label={"Instagram"}
+        >
+          <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z"/>
+            <path  d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z"/>
+          </svg>
+        </a>
+      </li>
+      <li className={styles.item}>
+        <a
+          href={"mailto:tereschenko23041991@gmail.com?subject=Слобода"}
+          target={"_blank"}
+          rel={"noreferrer"}
+          className={styles.link}
+          aria-label={"Mail"}
+        >
+          <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M25.1 14.522v-2.883h-2.297v2.883h-2.901v2.298h2.901v2.884H25.1V16.82H28v-2.298zM18.389 15.057H11.34v2.558h4.667c-.375 2.466-2.563 3.346-4.365 3.346-2.746 0-4.896-2.171-4.896-4.942 0-2.792 2.153-4.978 4.903-4.978 2.054 0 3.318 1.313 3.33 1.328l.212.226 1.786-1.847-.185-.205c-.077-.084-1.916-2.065-5.213-2.065C7.471 8.477 4 11.913 4 15.981c0 3.627 2.937 7.542 7.684 7.542 4.121 0 6.999-2.824 6.999-6.867 0-.409-.052-1.357-.206-1.514l-.088-.085z"/>
+          </svg>
+        </a>
+      </li>
+    </ul>
   )
 }
 

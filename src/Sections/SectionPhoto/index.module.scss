@@ -1,13 +1,13 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 15px;
+  grid-gap: rem(15px);
 
   @include media-breakpoint-up(sm) {
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
+    grid-gap: rem(20px);
   }
 
   @include media-breakpoint-up(md) {
@@ -21,10 +21,10 @@
 
 .column {
   overflow: hidden;
-  height: 250px;
+  height: rem(250px);
 
   @include media-breakpoint-up(sm) {
-    height: 250px;
+    height: rem(250px);
   }
 
   img {

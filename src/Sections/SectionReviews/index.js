@@ -5,11 +5,11 @@ import "slick-carousel/slick/slick.css";
 
 import styles from './index.module.scss'
 
-import {translate} from "../../i18n/translate";
+import {translate} from "i18n/translate";
 
-import Title from "../../Components/Title";
-import Container from "../../Components/Container";
-import ContainerFluid from "../../Components/ContainerFluid";
+import Title from "Components/Title";
+import Container from "Components/Container";
+import ContainerFluid from "Components/ContainerFluid";
 
 const settings = {
     dots: true,

@@ -1,4 +1,4 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .wrapper {
   @include make-spacer('mt', 10);
@@ -17,7 +17,7 @@
     left: 50%;
     transform: translateX(-50%);
     background-color: var(--color-dark);
-    width: 2px;
+    width: rem(2px);
     content: '';
   }
 }
@@ -96,7 +96,7 @@
   }
 
   &::after {
-    @include size(46px, 2px);
+    @include size(rem(46px), rem(2px));
 
     transform: translateY(-50%);
   }
@@ -143,10 +143,10 @@
   @include make-spacer('my', 4);
   @include make-spacer('my', 0, md);
   @include make-spacer('mx', 4, md);
-  @include size(150px);
+  @include size(rem(150px));
 
   border-radius: 50%;
-  border: 2px solid var(--color-dark);
+  border: rem(2px) solid var(--color-dark);
   background-color: var(--color-dark);
   overflow: hidden;
   flex-shrink: 0;
@@ -158,7 +158,7 @@
 }
 
 .info {
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
 .weight {

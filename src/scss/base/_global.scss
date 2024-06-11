@@ -7,9 +7,9 @@
 body {
   @include smooth-font;
 
-  background-color: #fff;
+  background-color: var(--color-white);
   min-width: var(--min-width);
-  min-height: 100vh;
+  min-height: 100dvh;
   overflow-x: hidden;
   overflow-y: auto;
   color: #262626;
@@ -17,10 +17,10 @@ body {
   font-family: var(--font-family);
   font-size: var(--font-size);
   font-weight: var(--typography-regular);
-  letter-spacing: 1px;
+  letter-spacing: rem(1px);
 
   &::-webkit-scrollbar {
-    width: 8px;
+    width: rem(8px);
   }
 
   &::-webkit-scrollbar-corner {
@@ -28,14 +28,14 @@ body {
   }
 
   &::-webkit-scrollbar-thumb {
-    border: 2px solid transparent;
-    border-radius: 19px;
+    border: rem(2px) solid transparent;
+    border-radius: rem(19px);
     background-clip: content-box;
     background-color: #888;
   }
 
   &::-webkit-scrollbar-track {
-    border: 1px solid #373737;
+    border: rem(1px) solid #373737;
     background-color: #474747;
   }
 }
@@ -72,6 +72,6 @@ section {
   @include make-spacer('py', 20, md);
 
   @include media-breakpoint-up(md) {
-    min-height: 100vh;
+    min-height: 100dvh;
   }
 }

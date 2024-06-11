@@ -1,4 +1,4 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .block {
   @include make-spacer('pb', 0);
@@ -7,23 +7,23 @@
 .map {
 
   iframe {
-    @include size(100%, 300px);
+    @include size(100%, rem(300px));
 
     display: block;
-    min-height: 300px;
+    min-height: rem(300px);
     overflow: hidden;
     border: 0;
 
     @include media-breakpoint-up(sm) {
-      height: 500px;
+      height: rem(500px);
     }
 
     @include media-breakpoint-up(md) {
-      height: 700px;
+      height: rem(700px);
     }
 
     @include media-breakpoint-up(lg) {
-      height: 900px;
+      height: rem(900px);
     }
   }
 }

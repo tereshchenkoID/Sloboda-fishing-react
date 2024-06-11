@@ -1,7 +1,7 @@
 import {useEffect} from "react";
 import {useDispatch} from "react-redux";
 
-import { loadData } from '../../redux/actions/dataActions'
+import { loadData } from 'redux/actions/dataActions'
 
 const Api = () => {
     const dispatch = useDispatch();

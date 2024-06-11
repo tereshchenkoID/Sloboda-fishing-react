@@ -1,4 +1,4 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .block {
   @include make-spacer('px', 10);
@@ -7,9 +7,9 @@
 
   position: relative;
   overflow: hidden;
-  min-height: 650px;
-  max-height: 800px;
-  height: 100vh;
+  min-height: rem(650px);
+  max-height: rem(800px);
+  height: 100dvh;
 
   @include media-breakpoint-up(sm) {
     max-height: unset;
@@ -34,7 +34,7 @@
   color: var(--color-white);
 
   @include media-breakpoint-up(md) {
-    max-width: 900px;
+    max-width: rem(900px);
   }
 }
 
@@ -78,7 +78,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 50px;
+    bottom: rem(50px);
     left: 0;
     right: 0;
     z-index: 10;
@@ -88,7 +88,7 @@
       button {
         @include make-spacer('mx', 2);
         @include font-size(0);
-        @include size(10px);
+        @include size(rem(10px));
 
         border-radius: 50%;
         background-color: var(--color-border);

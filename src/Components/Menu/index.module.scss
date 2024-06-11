@@ -1,19 +1,20 @@
-@import "../../scss/config";
+@import "scss/config";
 
 .block {
+  @include make-spacer(mb, 4);
   @include flex($direction: column);
 
   overflow: hidden;
 }
 
 .item {
-  @include font-size(20px);
+  @include font-size(rem(20px));
   @include make-spacer('my', 2);
 
   transition: var(--default-transition);
 
   @include media-breakpoint-up(sm) {
-    @include font-size(24px);
+    @include font-size(rem(24px));
   }
 
   &.active {
@@ -21,7 +22,7 @@
   }
 
   &:hover {
-    transform: translateX(20px);
+    transform: translateX(rem(20px));
   }
 }
 
